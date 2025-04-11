@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - PulseLink AI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="doctor-dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="doctor-profile">
+                    <div class="doctor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Cardiologist</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-user"></i> <span>My Patients</span></a></li>
+                    <li><a href="#"><i class="fas fa-calendar"></i> <span>Appointment Requests</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> <span>AI Health Insights</span></a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> <span>Consultation Notes</span></a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> <span>Profile Settings</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn outline-btn btn-full">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Doctor Dashboard</h1>
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="doctor-mini-profile">
+                        <div class="mini-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span>Dr. Sarah</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="patients">My Patients</button>
+                    <button class="tab-btn" data-tab="appointments">Appointment Requests</button>
+                    <button class="tab-btn" data-tab="alerts">Critical Alerts</button>
+                </div>
+
+                <div class="tab-content active" id="patients-content">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search patients..." id="patient-search">
+                        </div>
+                        <button class="btn primary-btn">Add New Patient</button>
+                    </div>
+
+                    <div class="section-intro">
+                        <h2>Patient Overview</h2>
+                        <p>Here's a list of all your current patients. Click on a patient to view detailed health insights.</p>
+                    </div>
+
+                    <div class="patient-list">
+                        <div class="patient-card">
+                            <div class="patient-info">
+                                <div class="patient-avatar">A</div>
+                                <div>
+                                    <h3>Ayaan Khan</h3>
+                                    <p>31 years • Male</p>
+                                </div>
+                            </div>
+                            <div class="patient-status">
+                                <div class="last-update">Updated 10:30 AM</div>
+                                <div class="alert-badge critical">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    Heart Rate
+                                </div>
+                                <div class="patient-actions">
+                                    <button class="icon-btn toggle-btn">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                    <div class="dropdown">
+                                        <button class="icon-btn dropdown-toggle">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="#">View full profile</a>
+                                            <a href="#">Contact patient</a>
+                                            <a href="#">Schedule appointment</a>
+                                            <a href="#">Add notes</a>
+                                        </div>
+                                    </div>
+                                    <a href="patient-detail.html" class="btn primary-btn btn-sm">View Details</a>
+                                </div>
+                            </div>
+                            <div class="patient-details hidden">
+                                <div class="details-grid">
+                                    <div class="details-section">
+                                        <h4>Recent Vitals</h4>
+                                        <ul>
+                                            <li><span>Heart Rate:</span> <span>78 bpm</span></li>
+                                            <li><span>Blood Pressure:</span> <span>120/78 mmHg</span></li>
+                                            <li><span>SpO2:</span> <span>97%</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="details-section">
+                                        <h4>AI Insights</h4>
+                                        <p>Critical patterns detected in sleep and heart rate variability.</p>
+                                    </div>
+                                    <div class="details-section">
+                                        <h4>Last Consultation</h4>
+                                        <p>March 15, 2025 - Follow-up on medication adjustment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="patient-card">
+                            <div class="patient-info">
+                                <div class="patient-avatar">P</div>
+                                <div>
+                                    <h3>Priya Sharma</h3>
+                                    <p>26 years • Female</p>
+                                </div>
+                            </div>
+                            <div class="patient-status">
+                                <div class="last-update">Updated 09:00 AM</div>
+                                <div class="alert-badge stable">
+                                    <i class="fas fa-check-circle"></i>
+                                    Stable
+                                </div>
+                                <div class="patient-actions">
+                                    <button class="icon-btn toggle-btn">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                    <div class="dropdown">
+                                        <button class="icon-btn dropdown-toggle">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="#">View full profile</a>
+                                            <a href="#">Contact patient</a>
+                                            <a href="#">Schedule appointment</a>
+                                            <a href="#">Add notes</a>
+                                        </div>
+                                    </div>
+                                    <a href="patient-detail.html" class="btn primary-btn btn-sm">View Details</a>
+                                </div>
+                            </div>
+                            <div class="patient-details hidden">
+                                <div class="details-grid">
+                                    <div class="details-section">
+                                        <h4>Recent Vitals</h4>
+                                        <ul>
+                                            <li><span>Heart Rate:</span> <span>72 bpm</span></li>
+                                            <li><span>Blood Pressure:</span> <span>118/76 mmHg</span></li>
+                                            <li><span>SpO2:</span> <span>98%</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="details-section">
+                                        <h4>AI Insights</h4>
+                                        <p>All metrics within normal ranges.</p>
+                                    </div>
+                                    <div class="details-section">
+                                        <h4>Last Consultation</h4>
+                                        <p>February 20, 2025 - Regular check-up</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="appointments-content">
+                    <div class="section-intro">
+                        <h2>Appointment Requests</h2>
+                        <p>Here are patients who requested an appointment. Accept or Reschedule.</p>
+                    </div>
+
+                    <div class="appointments-grid">
+                        <div class="appointment-card animate-pulse">
+                            <h3>Rohan Gupta</h3>
+                            <div class="appointment-details">
+                                <div class="detail-row">
+                                    <span>Preferred Time:</span>
+                                    <span>11 April, 5 PM</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Reason:</span>
+                                    <span>Fatigue & High HR</span>
+                                </div>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn success-btn">Accept</button>
+                                <button class="btn outline-btn" data-modal="reschedule-modal">Reschedule</button>
+                            </div>
+                        </div>
+
+                        <div class="appointment-card animate-pulse">
+                            <h3>Meera Verma</h3>
+                            <div class="appointment-details">
+                                <div class="detail-row">
+                                    <span>Preferred Time:</span>
+                                    <span>12 April, 3 PM</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Reason:</span>
+                                    <span>Sleep issues</span>
+                                </div>
+                            </div>
+                            <div class="appointment-actions">
+                                <button class="btn success-btn">Accept</button>
+                                <button class="btn outline-btn" data-modal="reschedule-modal">Reschedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="alerts-content">
+                    <div class="section-intro">
+                        <h2>AI-Flagged Critical Alerts</h2>
+                        <p>These patients require attention based on AI-analyzed health data.</p>
+                    </div>
+
+                    <div class="alerts-grid">
+                        <div class="alert-card critical animate-pulse">
+                            <h3>Ravi Singh</h3>
+                            <p>SpO2 dropped below 90% last night</p>
+                            <div class="alert-actions">
+                                <button class="btn outline-btn btn-sm">
+                                    <i class="fas fa-comment"></i> Contact
+                                </button>
+                                <button class="btn outline-btn btn-sm">
+                                    <i class="fas fa-stethoscope"></i> Recommend Test
+                                </button>
+                                <button class="btn primary-btn btn-sm">
+                                    <i class="fas fa-calendar"></i> Schedule Visit
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="alert-card warning animate-pulse">
+                            <h3>Anjali Kumari</h3>
+                            <p>BP fluctuating for 3 days</p>
+                            <div class="alert-actions">
+                                <button class="btn outline-btn btn-sm">
+                                    <i class="fas fa-comment"></i> Contact
+                                </button>
+                                <button class="btn outline-btn btn-sm">
+                                    <i class="fas fa-stethoscope"></i> Recommend Test
+                                </button>
+                                <button class="btn primary-btn btn-sm">
+                                    <i class="fas fa-calendar"></i> Schedule Visit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Reschedule Modal -->
+    <div class="modal" id="reschedule-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Reschedule Appointment</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="calendar-container" id="appointment-calendar">
+                    <!-- Calendar will be inserted here by JavaScript -->
+                </div>
+                <div class="modal-actions">
+                    <button class="btn outline-btn" id="cancel-reschedule">Cancel</button>
+                    <button class="btn primary-btn" id="confirm-reschedule">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/doctor-dashboard.js"></script>
+</body>
+</html>
